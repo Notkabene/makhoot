@@ -1,0 +1,104 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: $text;
+  letter-spacing: 0.33px;
+}
+
+ul,
+li {
+  font-family: 'Open Sans',
+  sans-serif;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  color: $text;
+}
+
+button,
+select {
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+.container {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.link {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    background-color: $text;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width .5s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: $text;
+  text-align: center;
+  letter-spacing: 0.9px;
+}
+
+.btn {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  background: linear-gradient(-50deg, #0ea5ea 0%, #14cefb 100%);
+  transition: all .3s linear;
+  &:hover {
+    box-shadow: 4px 4px 8px 1px rgba(0, 0, 0, 0.2);
+  }
+}
